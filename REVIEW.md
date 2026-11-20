@@ -1093,6 +1093,19 @@ brand's on/selected/save colour; no exception needed). Harness HC; rig
 possible brand-standards note covering Record red and any further "on"
 highlights (owner: hold for now).
 
+### 52. Mark a chapter while paused — FUTURE, not scheduled (owner, 2026-11-20)
+
+Raised at the pre-release Chrome smoke test. Today Mark chapter is greyed
+while paused (by design, v1.41: no video is being recorded, and since v1.38
+a pause ends the part, so there is no live part to hold the mark). The guide
+says so ("Resume first, then mark"). Idea: a click or M while paused queues
+the mark, and Resume places it at 0 ms of the new part — the same spot in
+the saved video as the pause point. Would need: a queued-mark state that
+survives Discard/Stop & save from pause (drop or keep?), the button lit
+while paused with a "(starts when you resume)" status line, harness + rig
+coverage, guide wording. Not a release blocker; Chrome smoke test otherwise
+clean.
+
 ### 47. Chapter marks + chapter sidecar export — ✓ DONE v1.41 (2026-10-23)
 
 **Shipped v1.41** as scoped below: Mark chapter button + M key (page focus

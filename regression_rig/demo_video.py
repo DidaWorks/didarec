@@ -22,17 +22,17 @@ OVERLAY = r"""
   const cur = document.createElement('div');
   cur.id = '__demoCursor';
   cur.style.cssText = 'position:fixed;left:0;top:0;width:22px;height:22px;z-index:99999;pointer-events:none;transform:translate(-3px,-2px);transition:left .05s linear, top .05s linear;';
-  cur.innerHTML = "<svg viewBox='0 0 24 24' width='22' height='22'><path d='M4 2 L20 12 L12 13.5 L8 21 Z' fill='#EFE6D3' stroke='#1F2B3D' stroke-width='1.6' stroke-linejoin='round'/></svg>";
+  cur.innerHTML = "<svg viewBox='0 0 24 24' width='22' height='22'><path d='M4 2 L20 12 L12 13.5 L8 21 Z' fill='#F5F3EC' stroke='#1B2230' stroke-width='1.6' stroke-linejoin='round'/></svg>";
   document.body.appendChild(cur);
   const cap = document.createElement('div');
   cap.id = '__demoCaption';
-  cap.style.cssText = "position:fixed;left:0;right:0;bottom:0;height:88px;padding:0 6%;display:flex;align-items:center;justify-content:center;background:#1F2B3D;color:#EFE6D3;font:600 23px/1.3 'Roboto','Segoe UI',Arial,sans-serif;text-align:center;z-index:99998;pointer-events:none;border-top:2px solid #4A5D7C;";
+  cap.style.cssText = "position:fixed;left:0;right:0;bottom:0;height:88px;padding:0 6%;display:flex;align-items:center;justify-content:center;background:#1B2230;color:#F5F3EC;font:600 23px/1.3 'Roboto','Segoe UI',Arial,sans-serif;text-align:center;z-index:99998;pointer-events:none;border-top:2px solid #3E4A5E;";
   document.body.appendChild(cap);
   window.__demo = {
     move(x, y) { cur.style.left = x + 'px'; cur.style.top = y + 'px'; },
     ripple(x, y) {
       const r = document.createElement('div');
-      r.style.cssText = 'position:fixed;left:' + (x - 18) + 'px;top:' + (y - 18) + 'px;width:36px;height:36px;border-radius:50%;border:3px solid #9CCDEE;z-index:99997;pointer-events:none;opacity:.9;transition:transform .45s ease-out, opacity .45s ease-out;';
+      r.style.cssText = 'position:fixed;left:' + (x - 18) + 'px;top:' + (y - 18) + 'px;width:36px;height:36px;border-radius:50%;border:3px solid #9DC1DA;z-index:99997;pointer-events:none;opacity:.9;transition:transform .45s ease-out, opacity .45s ease-out;';
       document.body.appendChild(r);
       requestAnimationFrame(() => { r.style.transform = 'scale(2.2)'; r.style.opacity = '0'; });
       setTimeout(() => r.remove(), 500);

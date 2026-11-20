@@ -16,24 +16,24 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    /* Brand palette (Blue Brazelton brand standards v0.8, dark-mode web
-       rules): Night slate page, Night card panels, Night rule borders,
-       Parchment text; Sky for on / selected / save; Terracotta-on-dark for
-       Record, live and attention. The variable names kept their old roles. */
-    --bg: #1F2B3D;            /* Night slate */
-    --surface: #2A3A52;       /* Night card */
-    --surface-hover: rgba(156, 205, 238, 0.08); /* Sky tint */
-    --border: #4A5D7C;        /* Night rule */
-    --text: #EFE6D3;          /* Parchment */
-    --text-dim: #BDB6A8;      /* Parchment tint: secondary text */
-    --accent: #E0997A;        /* Terracotta on dark: Record, live, attention */
-    --accent-hover: #EBB096;  /* Terracotta on dark, lighter */
-    --green: #9CCDEE;         /* Sky: on, selected, save */
-    --green-dim: #6F84A3;     /* Light slate: Sky borders */
-    --yellow: #E0997A;        /* paused / kept: terracotta on dark */
+    /* DidaWorks brand (Brand Standards/didaworks_brand_standards.md, dark set):
+       Dark sky page, Night pine panels, Dark rule borders, Aspen bark text;
+       Peaks blue (on dark) for on / selected / save; Aspen gold for Record,
+       live and attention. The variable names kept their old roles. */
+    --bg: #1B2230;            /* Dark sky */
+    --surface: #262F3F;       /* Night pine */
+    --surface-hover: rgba(157, 193, 218, 0.08); /* Peaks blue (on dark) tint */
+    --border: #3E4A5E;        /* Dark rule */
+    --text: #F5F3EC;          /* Aspen bark */
+    --text-dim: #C9C5BA;      /* Limestone: secondary text */
+    --accent: #F2CF6B;        /* Aspen gold: Record, live, attention */
+    --accent-hover: #F6DC93;  /* Aspen gold, lighter */
+    --green: #9DC1DA;         /* Peaks blue (on dark): on, selected, save */
+    --green-dim: #3D6A8A;     /* Peaks blue: borders for on states */
+    --yellow: #F2CF6B;        /* paused / kept: Aspen gold */
     /* Record red (owner, 2026-10-23): the one colour outside the brand palette,
-       because red = record is a convention people already know. Parchment/white
-       text on it is 5.3:1. Used for Record, Resume recording and the live dot only. */
+       because red = record is a convention people already know. White text on
+       it is 5.6:1. Used for Record, Resume recording and the live dot only. */
     --record: #C62828;
     --record-hover: #D93025;
     --radius: 8px;
@@ -49,8 +49,10 @@
     align-items: center;
   }
 
+  .tm { font-size: 0.55em; vertical-align: super; font-weight: 400; }
+
   header {
-    background: #3A4F6E; /* Slate: the header is its own layer (brand) */
+    background: #234A3A; /* Ponderosa: the header is its own layer (brand) */
     width: 100%;
     padding: 1.25rem 2rem;
     display: flex;
@@ -84,13 +86,13 @@
   .help-panel.open { display: flex; }
   .help-panel-bar {
     display: flex; align-items: center; gap: 0.75rem;
-    padding: 0.6rem 0.9rem; background: #3A4F6E; color: var(--text);
+    padding: 0.6rem 0.9rem; background: #234A3A; color: var(--text);
     border-bottom: 1px solid var(--border);
   }
   .help-panel-bar h2 { font-size: 1rem; margin: 0; }
   .help-panel-bar a { color: var(--green); font-size: 0.8rem; margin-left: auto; }
   .help-panel-close {
-    background: none; border: 1px solid rgba(239, 230, 211, 0.4); color: var(--text);
+    background: none; border: 1px solid rgba(245, 243, 236, 0.4); color: var(--text);
     border-radius: 6px; width: 2rem; height: 2rem; font-size: 1.1rem; cursor: pointer; line-height: 1;
   }
   .help-panel-close:hover, .help-panel-close:focus-visible { border-color: var(--green); color: var(--green); }
@@ -102,7 +104,7 @@
     font-size: 0.7rem;
     padding: 0.2rem 0.5rem;
     border-radius: 999px;
-    background: rgba(239, 230, 211, 0.12);
+    background: rgba(245, 243, 236, 0.12);
     color: var(--text);
   }
 
@@ -238,10 +240,10 @@
      earlier tint-and-border look was hard to tell from "off". */
   .toggle-btn.active {
     border-color: var(--green);
-    color: #1F2B3D;
+    color: #1B2230;
     background: var(--green);
   }
-  .toggle-btn.active:hover { background: #B9DDF3; }
+  .toggle-btn.active:hover { background: #B8D3E6; }
 
   .toggle-btn svg { width: 16px; height: 16px; }
 
@@ -371,7 +373,7 @@
     cursor: not-allowed;
   }
   .btn-select-screen.selected {
-    background: rgba(156, 205, 238, 0.15);
+    background: rgba(157, 193, 218, 0.15);
     border-color: var(--green);
   }
 
@@ -379,7 +381,7 @@
     background: var(--border);
     color: var(--text);
   }
-  .btn-stop:hover { background: #4A5D7C; }
+  .btn-stop:hover { background: #3E4A5E; }
 
   .btn-pause {
     background: var(--border);
@@ -401,7 +403,7 @@
     background: var(--border);
     color: var(--text);
   }
-  .btn-change-screen:hover { background: #4A5D7C; }
+  .btn-change-screen:hover { background: #3E4A5E; }
   .btn-change-screen:disabled {
     opacity: 0.4;
     cursor: not-allowed;
@@ -412,7 +414,7 @@
     background: var(--border);
     color: var(--text);
   }
-  .btn-mark-chapter:hover { background: #4A5D7C; }
+  .btn-mark-chapter:hover { background: #3E4A5E; }
   .btn-mark-chapter:disabled {
     opacity: 0.4;
     cursor: not-allowed;
@@ -420,17 +422,17 @@
 
   .btn-save {
     background: var(--green);
-    color: #1F2B3D;
+    color: #1B2230;
   }
-  .btn-save:hover { background: #B9DDF3; }
+  .btn-save:hover { background: #B8D3E6; }
 
   button.primary:not(:disabled):active { transform: scale(0.97); }
 
   /* Recovery banner */
   .recovery-banner {
     padding: 1rem 1.25rem;
-    background: rgba(224, 153, 122, 0.1);
-    border: 1px solid rgba(224, 153, 122, 0.3);
+    background: rgba(242, 207, 107, 0.1);
+    border: 1px solid rgba(242, 207, 107, 0.3);
     border-radius: var(--radius);
     display: none;
   }
@@ -457,8 +459,8 @@
   /* Download confirmation bar (Firefox download-fallback saves) */
   .download-confirm {
     padding: 1rem 1.25rem;
-    background: rgba(156, 205, 238, 0.08);
-    border: 1px solid rgba(156, 205, 238, 0.3);
+    background: rgba(157, 193, 218, 0.08);
+    border: 1px solid rgba(157, 193, 218, 0.3);
     border-radius: var(--radius);
     display: none;
   }
@@ -485,8 +487,8 @@
   /* Error display */
   .error-banner {
     padding: 0.75rem 1rem;
-    background: rgba(224, 153, 122, 0.1);
-    border: 1px solid rgba(224, 153, 122, 0.3);
+    background: rgba(242, 207, 107, 0.1);
+    border: 1px solid rgba(242, 207, 107, 0.3);
     border-radius: var(--radius);
     font-size: 0.8rem;
     color: var(--text);
@@ -516,8 +518,8 @@
      via showInfoBanner() but swaps the error-red palette for a neutral
      tint built from the app's existing --text-dim, never a new color. */
   .error-banner.info {
-    background: rgba(156, 205, 238, 0.1);
-    border-color: rgba(156, 205, 238, 0.3);
+    background: rgba(157, 193, 218, 0.1);
+    border-color: rgba(157, 193, 218, 0.3);
     color: var(--text);
   }
   .error-banner.info .error-banner-close { color: var(--text-dim); }
@@ -527,13 +529,13 @@
     background: var(--border);
     color: var(--text);
   }
-  .btn-caption-editor:hover { background: #4A5D7C; }
+  .btn-caption-editor:hover { background: #3E4A5E; }
 
   .btn-back-recorder {
     background: var(--border);
     color: var(--text);
   }
-  .btn-back-recorder:hover { background: #4A5D7C; }
+  .btn-back-recorder:hover { background: #3E4A5E; }
 
   .caption-editor {
     display: none;
@@ -569,9 +571,9 @@
 
   .btn-save-vtt {
     background: var(--green);
-    color: #1F2B3D;
+    color: #1B2230;
   }
-  .btn-save-vtt:hover { background: #B9DDF3; }
+  .btn-save-vtt:hover { background: #B8D3E6; }
 
   .btn-save-srt {
     background: var(--surface);
@@ -640,7 +642,7 @@
 
   .caption-cue-row.active {
     border-color: var(--green);
-    background: rgba(156, 205, 238, 0.08);
+    background: rgba(157, 193, 218, 0.08);
   }
 
   .caption-time-input {
@@ -676,14 +678,14 @@
     font-size: 0.75rem;
     cursor: pointer;
   }
-  .btn-delete-cue:hover { background: rgba(224, 153, 122, 0.1); }
+  .btn-delete-cue:hover { background: rgba(242, 207, 107, 0.1); }
 
   /* Review pane (REVIEW #21 session 2) */
   .btn-stop-review {
     background: var(--border);
     color: var(--text);
   }
-  .btn-stop-review:hover { background: #4A5D7C; }
+  .btn-stop-review:hover { background: #3E4A5E; }
 
   .btn-undo-rerecord {
     background: var(--surface);
@@ -740,9 +742,9 @@
 
   .btn-save-as-is {
     background: var(--green);
-    color: #1F2B3D;
+    color: #1B2230;
   }
-  .btn-save-as-is:hover { background: #B9DDF3; }
+  .btn-save-as-is:hover { background: #B8D3E6; }
 
   .review-pane {
     display: none;
@@ -761,7 +763,7 @@
     padding: 0.6rem 0.9rem;
     border-radius: var(--radius);
     border: 1px solid var(--green-dim);
-    background: rgba(156, 205, 238, 0.08);
+    background: rgba(157, 193, 218, 0.08);
     font-size: 0.85rem;
   }
   .review-part-mode.visible { display: flex; }
@@ -811,7 +813,7 @@
   }
   .review-part-row.playing {
     border-color: var(--green);
-    background: rgba(156, 205, 238, 0.08);
+    background: rgba(157, 193, 218, 0.08);
   }
   .review-part-label {
     font-size: 0.85rem;
@@ -844,7 +846,7 @@
     color: var(--accent-hover);
     border-color: var(--border);
   }
-  .btn-part.danger:hover { background: rgba(224, 153, 122, 0.1); }
+  .btn-part.danger:hover { background: rgba(242, 207, 107, 0.1); }
 
   /* Footer */
   footer {
@@ -862,7 +864,7 @@
 <body>
 
 <header>
-  <span class="brand"><img src="brand/bb_owl_parchment.svg" alt=""><h1>DidaRec</h1></span>
+  <span class="brand"><img src="brand/dw_owl_small_bark.svg" alt=""><h1>DidaRec<span class="tm">™</span></h1></span>
   <span class="header-right">
     <!-- Opens the guide in a side panel (v1.39): the page never navigates, so
          a click mid-recording is safe, and the instructions can be read while recording. -->

@@ -43,6 +43,7 @@ DidaRec writes each second of video to persistent storage the moment it's record
   - **Saving is a download.** Firefox doesn't implement that API, so the finished file arrives as a normal browser download. Since a page can't confirm a download succeeded, DidaRec shows a "Downloaded — did it arrive?" bar; click "It's there — all set" once you've checked your Downloads folder, or "It didn't arrive — keep my recording" to keep it safely stored for another attempt.
   - **No computer audio** without extra setup — see "System audio on Firefox" below.
   - **Re-recording from a point in the first several seconds of a take isn't available.** Choosing a time that early offers to start the take over instead. Later points work normally.
+  - **Long recordings are best saved in Chrome/Edge.** In testing, saving a recording of 30 minutes or more in Firefox used much more memory than the file's size. The saved file was complete and played normally.
 
 Either way, the crash-resilience story is the same underneath: your recording is written to your browser's storage in small pieces the whole time, and the save step assembles and hands off what's already safe.
 

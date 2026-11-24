@@ -160,7 +160,7 @@ def demo(r):
         pass
     r.wait(1500)
 
-    d.say("Free and open source. Your video stays on your computer.  bluebrazelton-dotcom.github.io/DidaRec")
+    d.say("Free and open source. Your video stays on your computer.  didaworks.org/didarec")
     r.wait(4500)
     d.hush()
     r.wait(600)

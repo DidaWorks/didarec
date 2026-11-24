@@ -1,6 +1,6 @@
 # DidaRec
 
-A free, open-source screen recorder by DidaWorks. Runs entirely in your browser — no account, no server, no watermark, no time limits.
+A free, open-source screen recorder by DidaWorks. Runs entirely in your browser — no account, no server, no watermark, no time limits. Page visits are counted with [GoatCounter](https://www.goatcounter.com/) (no cookies, no personal data); your recordings never leave your computer.
 
 **Crash-resilient by design:** Every second of your recording is saved to disk as it happens. If your browser crashes at minute 58 of a lecture, you lose about one second of video, because everything else is already saved.
 
@@ -72,9 +72,9 @@ If a screen share ever lands with no audio, DidaRec shows a one-time reminder th
 
 ## Usage
 
-Use it right now at [bluebrazelton-dotcom.github.io/DidaRec](https://bluebrazelton-dotcom.github.io/DidaRec/), or clone [the repo](https://github.com/bluebrazelton-dotcom/DidaRec) and serve it locally.
+Use it right now at [didaworks.org/didarec](https://didaworks.org/didarec/), or clone [the repo](https://github.com/DidaWorks/didarec) and serve it locally.
 
-New to DidaRec? Read the [plain-language guide](https://bluebrazelton-dotcom.github.io/DidaRec/guide.html) or watch the [one-minute demo](https://bluebrazelton-dotcom.github.io/DidaRec/guide.html#demo) at the top of it.
+New to DidaRec? Read the [plain-language guide](https://didaworks.org/didarec/guide.html) or watch the [one-minute demo](https://didaworks.org/didarec/guide.html#demo) at the top of it.
 
 ## License
 
